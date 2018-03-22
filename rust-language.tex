@@ -1,0 +1,62 @@
+\section{Rust Programming Language}
+\label{sec:rust-language}
+
+\begin{frame}[fragile]
+  \frametitle{Can you make sense of this?}
+    \begin{minted}{rust}
+      pub fn main() {
+        let v = vec!(1,2,3);
+        let numbers: Vec<i32> = v.iter().map(|n| n * n).collect();
+        println!("{:?}", numbers);
+      }
+    \end{minted}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Rust Benefits}
+  \begin{itemize}
+  \item High-Level Syntax (similar to Ruby or Java)
+  \item Low-Level Performance (similar to C/C++)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Rust {\DejaSans ❤} TDD}
+    \begin{minted}{rust}
+      pub fn add_one(a: u32) -> u32 {
+        a + 1
+      }
+
+      #[test]
+      fn test_add() {
+        let result = add_one(1);
+        assert_eq!(result, 2);
+      }
+    \end{minted}
+    Compile and Run
+    \begin{minted}{bash}
+      $ cargo --test sample.rs
+      $ ./sample
+    \end{minted}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Key Language Features}
+  \begin{itemize}
+  \item Functional Language Features I like in Rust
+    \begin{itemize}
+    \item Pattern Matching
+    \item ENums similar to Algebraic Data Types
+    \item Lazy Iterators
+    \item Functions as first class values
+    \item Error Handling Primitives using Result ADT
+    \end{itemize}
+  \item Rust Lang Features I Like
+    \begin{itemize}
+    \item \textbf{Ownership and Borrowing}
+    \item Lifetimes
+    \item Unit Testing primitives as part of the core language
+    \item Concurrency Primitives --- Threads, Channels, Atomic Values etc.
+    \end{itemize}
+  \end{itemize}
+\end{frame}
