@@ -47,6 +47,73 @@
     \end{minted}
 \end{frame}
 
+\begin{frame}[fragile]
+  \frametitle{Mimic OO}
+  Let's define a simple Trait! \break{}
+  \begin{minted}{rust}
+    trait Animal {
+      fn walk(&self);
+    }
+  \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Mimic OO}
+  Let's implement it! \break{}
+  \begin{minted}[fontsize=\scriptsize]{rust}
+    struct Cat {
+      name: String
+    }
+
+    impl Cat {
+      pub fn new(name: String) -> Cat {
+        Cat { name }
+      }
+    }
+
+    impl Animal for Cat {
+      fn walk(&self) {
+        println!("{} walks like a cat", self.name);
+      }
+    }
+  \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Mimic OO}
+  Let's implement it again! \break{}
+  \begin{minted}[fontsize=\scriptsize]{rust}
+    struct Dog {
+      name: String
+    }
+
+    impl Dog {
+      pub fn new(name: String) -> Dog {
+        Dog { name }
+      }
+    }
+
+    impl Animal for Dog {
+      fn walk(&self) {
+        println!("{} walks like a dog", self.name);
+      }
+    }
+  \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Mimic OO}
+  What is the output? \break{}
+  \begin{minted}{rust}
+    fn main() {
+      let d = Dog::new(String::from("Snuggles"));
+      let c = Cat::new(String::from("Pinkie Pie"));
+      d.walk();
+      c.walk();
+    }
+  \end{minted}
+\end{frame}
+
 \begin{frame}
   \frametitle{Key Language Features}
   \begin{itemize}
