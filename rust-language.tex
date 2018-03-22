@@ -33,10 +33,17 @@
         assert_eq!(result, 2);
       }
     \end{minted}
-    Compile and Run
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Running tests is straightforward}
     \begin{minted}{bash}
       $ cargo --test sample.rs
       $ ./sample
+      running 1 test
+      test test_add ... ok
+      test result: ok. 1 passed; 0 failed; 0 ignored;
+      0 measured; 0 filtered out
     \end{minted}
 \end{frame}
 
