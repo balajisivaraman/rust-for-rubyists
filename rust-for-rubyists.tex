@@ -1,0 +1,67 @@
+\documentclass[bigger]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage[backend=biber,style=numeric]{biblatex}
+\bibliography{rust-in-peace.bib}
+\usepackage{fontspec}
+\usepackage[outputdir=output]{minted}
+\usepackage{tikz}
+\usetikzlibrary{tikzmark}
+\setmonofont{PragmataPro}
+\setminted{autogobble=true,fontsize=\footnotesize}
+
+\setbeamersize{text margin left=0.6cm,text margin right=0.6cm}
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+
+\usetheme{Copenhagen}
+
+\author{Balaji Sivaraman (\href{https://twitter.com/balajisivaraman}{@balajisivaraman})}
+\date{March 24, 2018}
+\title{Rust for Rubyists}
+\institute{ThoughtWorks}
+\hypersetup{
+  pdfauthor={Balaji Sivaraman},
+  pdftitle={Rust for Rubyists},
+  pdfkeywords={rust-lang,systems-programming,memory-management,lifetimes},
+  pdfsubject={A gentle introduction to Rust Lang for Rubyists, highlighting salient features of the former},
+  pdflang={English}}
+
+\begin{document}
+
+\maketitle
+
+\input{about-me}
+\input{introduction}
+
+\begin{frame}
+  \centerline{
+    \huge{Questions?}
+  }
+\end{frame}
+
+\begin{frame}
+  \frametitle{References}
+  \renewcommand*{\bibfont}{\scriptsize}
+  \printbibliography{}
+\end{frame}
+
+\begin{frame}
+  \centerline{
+    \huge{Thank you!}
+  }
+  \centerline{
+    \footnotesize{Slides source available at: \href{https://github.com/balajisivaraman/rust-for-rubyists}{https://github.com/balajisivaraman/rust-for-rubyists}}
+  }
+\end{frame}
+\end{document}
