@@ -106,8 +106,10 @@
       c.walk();
     }
   \end{minted}
-    \break{}
-    And the output?
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{And the output}
   \begin{minted}{shell}
     $ rustc sample.rs
     $ ./sample
@@ -116,18 +118,25 @@
   \end{minted}
 \end{frame}
 
+\setbeamertemplate{itemize/enumerate body begin}{\footnotesize}
+\setbeamertemplate{itemize/enumerate subbody begin}{\scriptsize}
+
 \begin{frame}
   \frametitle{Key Language Features}
   \begin{itemize}
-  \item Functional Language Features I like in Rust
+  \item Functional Features
     \begin{itemize}
-    \item Pattern Matching
-    \item ENums similar to Algebraic Data Types
+    \item ENums, Pattern Matching and Algebraic Data Types
     \item Lazy Iterators
     \item Functions as first class values
-    \item Error Handling Primitives using Result ADT
     \end{itemize}
-  \item Rust Lang Features I Like
+  \item OO-Like Features
+    \begin{itemize}
+    \item Traits and Implementations
+    \item Trait Objects
+    \item Constrain type of value passed to a function
+    \end{itemize}
+  \item Rust Lang Features
     \begin{itemize}
     \item \textbf{Ownership and Borrowing}
     \item Lifetimes
