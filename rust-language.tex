@@ -71,12 +71,6 @@
       name: String
     }
 
-    impl Cat {
-      pub fn new(name: String) -> Cat {
-        Cat { name }
-      }
-    }
-
     impl Animal for Cat {
       fn walk(&self) {
         println!("{} walks like a cat", self.name);
@@ -93,12 +87,6 @@
       name: String
     }
 
-    impl Dog {
-      pub fn new(name: String) -> Dog {
-        Dog { name }
-      }
-    }
-
     impl Animal for Dog {
       fn walk(&self) {
         println!("{} walks like a dog", self.name);
@@ -112,8 +100,8 @@
   What is the output? \break{}
   \begin{minted}{rust}
     fn main() {
-      let d = Dog::new(String::from("Snuggles"));
-      let c = Cat::new(String::from("Pinkie Pie"));
+      let d = Dog { name: String::from("Snuggles") };
+      let c = Cat { name: String::from("Pinkie Pie") };
       d.walk();
       c.walk();
     }
