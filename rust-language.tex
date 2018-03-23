@@ -101,10 +101,18 @@
   \begin{minted}{rust}
     fn main() {
       let d = Dog { name: String::from("Snuggles") };
-      let c = Cat { name: String::from("Pinkie Pie") };
+      let c = Cat { name: String::from("Puss in Boots") };
       d.walk();
       c.walk();
     }
+  \end{minted}
+    \break{}
+    And the output?
+  \begin{minted}{shell}
+    $ rustc sample.rs
+    $ ./sample
+    Snuggles walks like a dog
+    Puss in Boots walks like a cat
   \end{minted}
 \end{frame}
 
