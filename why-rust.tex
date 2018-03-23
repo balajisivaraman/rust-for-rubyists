@@ -1,12 +1,33 @@
-\begin{section}{Why Rust - The Good Stuff}
-  \begin{frame}
-    \frametitle{Why Rust - The Good Stuff}
+\section{Why Rust?}
+\label{sec:why-rust}
+
+\setbeamertemplate{itemize/enumerate body begin}{\small}
+\setbeamertemplate{itemize/enumerate subbody begin}{\footnotesize}
+
+\begin{frame}[fragile]
+  \frametitle{Why Rust? --- For Rubyists}
+  \begin{itemize}
+  \item Great for small utility packages
     \begin{itemize}
-    \item The Rust Lang Book \cite{RustLangEd}
-    \item Beginner Friendly Ecosystem - Rustup, Cargo, VSCode Plugin (RLS Integration) etc.
-    \item Community that is accomodating of newcomers and is always glad to help
-    \item Lot of scope for contributions (For eg: \href{https://github.com/rust-lang-nursery/}{Rust Lang Nursery})
-    \item CLI Infrastructure powered by Rust (For eg: \href{https://github.com/BurntSushi/riggrep/}{ripgrep}, \href{https://github.com/sharkdp/fd/}{fd})
+    \item We have a gem to do some basic templating, with a single dependency on the {\footnotesize \mintinline{rust}{chef}} gem
+    \item Bundled together size is 500MB, making things like containerization tedious
+    \item A Rust binary for the same (WIP) would be a fraction of the size and embeddable anywhere
     \end{itemize}
-  \end{frame}
-\end{section}
+  \item Easy to call Rust from Ruby using the {\footnotesize \mintinline{rust}{ffi}} gem
+  \item Lots of community work done on enabling native Ruby extensions in Rust
+    \begin{itemize}
+    \item \href{https://usehelix.com/}{\textbf{Helix}} from Yehuda Katz and Skylight
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Why Rust? --- For Everyone}
+  \begin{itemize}
+  \item The Rust Lang Book \cite{RustLangEd}
+  \item Beginner Friendly Ecosystem --- Rustup, Cargo, VSCode Plugin (RLS Integration) etc.
+  \item Community that is accomodating of newcomers and is always glad to help
+  \item Lot of scope for contributions (For eg: \href{https://github.com/rust-lang-nursery/}{Rust Lang Nursery})
+  \item CLI Infrastructure powered by Rust (For eg: \href{https://github.com/BurntSushi/riggrep/}{ripgrep}, \href{https://github.com/sharkdp/fd/}{fd})
+  \end{itemize}
+\end{frame}
